@@ -64,10 +64,6 @@ public class MusicPlayer implements UserInterface {
             Logger.getLogger(MusicPlayer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public void play(Playlist playlist) {
-        // not implemented yet
-    }
 
     @Override
     public void pause() throws InterruptedException {
