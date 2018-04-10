@@ -18,9 +18,15 @@ public class Song {
     private java.io.File songFile;
     private String title;    
     
-    public java.io.File getFile() { return this.songFile; }
-    public String getTitle() { return this.title; }
-    public String getFilePath() { return this.filePath; }
+    public java.io.File getFile() {
+        return this.songFile;
+    }
+    public String getTitle() {
+        return this.title;
+    }
+    public String getFilePath() {
+        return this.filePath;
+    }
     
     public void updateFile(java.io.File newfile) {
         this.songFile = newfile;

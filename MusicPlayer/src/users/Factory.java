@@ -50,16 +50,18 @@ package users;
  */
 public class Factory {
     public static User createUser(String username, String password, boolean isVip) {
-        if(isVip)
+        if(isVip) {
             return new VipUser(username, password);
-        else 
+        } else {
             return new DefaultUser(username, password);
+        }
     }
     
     public static User createUser(int id, String username, String password, boolean isVip) {
-        if(isVip)
+        if(isVip) {
             return new VipUser(id, username, password);
-        else
+        } else {
             return new DefaultUser(id, username, password);
+        }
     }
 }

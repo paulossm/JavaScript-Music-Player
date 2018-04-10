@@ -20,9 +20,15 @@ public class Playlist {
     private java.io.File file;
     private ArrayList<Song> songs;
     
-    public String getTitle() { return this.title; }
-    public java.io.File getFile() { return this.file; }
-    public ArrayList<Song> listSongs() { return this.songs; }
+    public String getTitle() { 
+        return this.title;
+    }
+    public java.io.File getFile() {
+        return this.file;
+    }
+    public ArrayList<Song> listSongs() {
+        return this.songs;
+    }
     
     public void addSong(Song song) {
         this.songs.add(song);
