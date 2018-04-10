@@ -52,16 +52,16 @@ public class JpodPlayer {
         synchronized (playerLock) {
             switch (playerStatus) {
                 case NOTSTARTED:
-                    final Runnable r = new Runnable() {
+                    final Runnable runnable = new Runnable() {
                         public void run() {
                             playInternal();
                         }
                     };
-                    final Thread t = new Thread(r);
-                    t.setDaemon(true);
-                    t.setPriority(Thread.MAX_PRIORITY);
+                    final Thread thread = new Thread(r);
+                    thread.setDaemon(true);
+                    thread.setPriority(Thread.MAX_PRIORITY);
                     playerStatus = PLAYING;
-                    t.start();
+                    thread.start();
                     break;
                 case PAUSED:
                     resume();
